@@ -61,7 +61,7 @@ $(function () {
         // Get the user input from local storage using the time block id as the key
         var userInput = localStorage.getItem(timeBlockId);
         // Set the textarea value with the retrieved user input
-        $(this).find("description").val(userInput);
+        $(this).find(".description").val(userInput);
     });
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
@@ -74,4 +74,6 @@ $(function () {
         var dateElement = document.getElementById("currentDay");
         dateElement.textContent = currentDate.toDateString();
       };
+
+      displayCurrentDate();
   });
