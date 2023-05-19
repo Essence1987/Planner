@@ -51,7 +51,17 @@ $(function () {
     function displayCurrentDate() {
         var currentDate = new Date();
         var dateElement = document.getElementById("currentDay");
+        var timeElement = document.getElementById("currentTime");
+
+        //Set the Date
         dateElement.textContent = currentDate.toDateString();
+
+        // Set the Time
+        var hours = String(currentDate.getHours()).padStart(2, "0");
+        var minutes = String(currentDate.getMinutes()).padStart(2, "0");
+        var seconds = String(currentDate.getSeconds()).padStart(2, "0");
+        var currentTime = hours + ":" + minutes + ":" + seconds;
+        timeElement.textContent = currentTime;
       };
 
       displayCurrentDate();
