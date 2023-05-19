@@ -1,9 +1,8 @@
-# 05 Third-Party APIs: Work Day Scheduler
-## JavaScript: Password Generator
+# Third-Party APIs: Work Day Scheduler
 
 ## Description
 
-This Password Generator was created using JavaScript.  When user selects "Generate Password" prompts will display asking questions to user. A passwork will generate and display in the box based of user responces. 
+This Work Day Scheduler was created using Third-Party APIs. It shows the current day at the top of the calander. A user can schedule their work day and save each time slot. When the page refreshes, as long as the user hit save, the entered information will remain. Past times are in Gray. The current time is in Red. Future times are in Green.
 
 ## Visuals
 
