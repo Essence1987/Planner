@@ -51,18 +51,30 @@ $(function () {
     function displayCurrentDate() {
         var currentDate = new Date();
         var dateElement = document.getElementById("currentDay");
-        var timeElement = document.getElementById("currentTime");
 
         //Set the Date
         dateElement.textContent = currentDate.toDateString();
-
-        // Set the Time
-        var hours = String(currentDate.getHours()).padStart(2, "0");
-        var minutes = String(currentDate.getMinutes()).padStart(2, "0");
-        var seconds = String(currentDate.getSeconds()).padStart(2, "0");
-        var currentTime = hours + ":" + minutes + ":" + seconds;
-        timeElement.textContent = currentTime;
       };
 
       displayCurrentDate();
+
+      function displayCurrentTime() {
+        var currentTimeElement = document.getElementById("currentTime");
+      
+        setInterval(function() {
+            var currentDate = new Date();
+            var hours = currentDate.getHours();
+            var period = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12 || 12;
+            var minutes = String(currentDate.getMinutes()).padStart(2, "0");
+            var seconds = String(currentDate.getSeconds()).padStart(2, "0");
+            var currentTime = hours + ":" + minutes + ":" + seconds + " " + period;
+      
+          currentTimeElement.textContent = currentTime;
+        }, 1000); // Update every 1 second
+      }
+      
+      // Call the function to display the current time
+      displayCurrentTime();
+      
   });
