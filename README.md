@@ -10,6 +10,8 @@ The following animation demonstrates the application functionality:
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./assets/images/DailyCalanderInAction.gif)
 
+The following <a href="https://essence1987.github.io/Planner/">link</a> takes you to the live page 
+
 **Note** This mockup may not fully match the current page's functionality.
 
 ## Support
